@@ -90,7 +90,6 @@ public class MainPage {
         //Click "Apply"
         driver.findElement(By.xpath("//button[@aria-label='Apply']")).click();
         
-
         //Go to Filter result
         driver.get("https://www.ebay.com/b/6-Inch-or-More-Cell-Phones-Smartphones/9355/bn_80192836?rt=nc&_udlo=1000000&_udhi=8000000&LH_PrefLoc=6");
 

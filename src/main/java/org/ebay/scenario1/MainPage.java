@@ -52,37 +52,44 @@ public class MainPage {
         driver.findElement(By.xpath("//a[contains(text(),'Cell Phones & Smartphones')]")).click();
 
         //Scroll to "More refinements"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         JavascriptExecutor MoreRefinements = (JavascriptExecutor) driver;
         WebElement _MoreRefinements = driver.findElement(By.xpath("//button[contains(text(),'More refinements')]"));
         MoreRefinements.executeScript("arguments[0].scrollIntoView(true);", _MoreRefinements);
 
         //Click "More refinements"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//button[contains(text(),'More refinements')]")).click();
-        Thread.sleep(3000);
-
-        /*
+                
         //Select "Screen Size
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("(//form[@id='x-overlay__form']//child::div)[11]")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@id='c3-subPanel-Screen%20Size_6%20in%20or%20More_cbx']")).click();
-
+       
         //Select "Price"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//div[@id='c3-mainPanel-price']")).click();
-
+      
         //Input field "Price from"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement PriceFrom = driver.findElement(By.xpath("(//input[@class='x-textrange__input x-textrange__input--from'])[2]"));
         PriceFrom.sendKeys("1000000");
 
         //Input field "Price to"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement PriceTo = driver.findElement(By.xpath("(//input[@class='x-textrange__input x-textrange__input--to'])[2]"));
         PriceTo.sendKeys("8000000");
 
         //Select "Item Location"
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//div[@id='c3-mainPanel-location']")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("(//input[@data-value='Asia'])[2]")).click();
 
         //Click "Apply"
         driver.findElement(By.xpath("//button[@aria-label='Apply']")).click();
-        */
+        
 
         //Go to Filter result
         driver.get("https://www.ebay.com/b/6-Inch-or-More-Cell-Phones-Smartphones/9355/bn_80192836?rt=nc&_udlo=1000000&_udhi=8000000&LH_PrefLoc=6");
@@ -90,6 +97,6 @@ public class MainPage {
         //Verify Filter Result
         driver.findElement(By.xpath("//*[text()='6 Inch or More Cell Phones & Smartphones between IDR1,000,000.00 and IDR8,000,000.00']"));
         Thread.sleep(5000);
-    }
+   }
 
 }
